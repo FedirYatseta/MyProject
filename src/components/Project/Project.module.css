@@ -1,5 +1,7 @@
-.nav{
+.project {
+  display: flex;
+  justify-content:flex-start;
+  background-color: aliceblue;
   padding: 5px;
-  background-color: rgb(180, 197, 228);
   margin: 5px;
 }

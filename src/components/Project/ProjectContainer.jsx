@@ -1,7 +1,7 @@
-import React from 'react';
+
 import { connect } from 'react-redux';
 import Project from './Project';
-import s from "./Project.module.css"
+
 
 let mapStateToProps = (state)=> {
     return  {
@@ -10,4 +10,4 @@ let mapStateToProps = (state)=> {
 }
 
 const ProjectContainerPage = connect (mapStateToProps)(Project)
-export default Project;
+export default ProjectContainerPage;
