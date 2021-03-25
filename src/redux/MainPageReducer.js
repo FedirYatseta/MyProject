@@ -1,7 +1,7 @@
 let initialState = {
     sale: [
-        { id: 1, post: 'Sale underwear for man' },
-        { id: 2, post: 'Sale underwear for woman'}
+        { id: 1, post: 'Чому варто вибрати нас?' },
+        { id: 2, post: 'Скільки часу потрібно для впровадження системи?'}
     ]
 }
 

@@ -22,10 +22,34 @@
 .app-wrapper .app-title {
 flex: 0 1 80%;
 }
-.app-wrapper .app-contact {
+.app-wrapper .app-contact-row {
   border-top: 1px solid #656565;
+  display: flex;
+  padding: 5px;
   flex: 0 1 100%;
+  text-align: center;
   }
-div {
-  margin: 5px;
+
+.contact{
+  border: 5px solid #5e5373;
 }
+
+.logo{
+  border: 5px solid #5e5373;
+}
+  
+.map{
+  border: 5px solid #5e5373;
+  height: 94.5%;   
+  width: 100%; 
+}
+.block__element_1{
+  flex: 0 1 33.333%;
+  }
+.block__element_2{
+  flex: 0 1 33.333%;
+  }
+.block__element_3{
+
+  flex: 0 1 33.333%;
+  }
