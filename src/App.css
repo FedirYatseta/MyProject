@@ -1,55 +1,33 @@
+html, body, #root, .app-wrapper {
+  height: 100%;
+  margin: 0 auto;
+}
+
 .app-wrapper{
   display: flex;
-  flex-wrap: wrap;
-  background-color: rgb(212, 212, 207);
-  margin: auto;
+  flex-direction: column;
+  min-height: 100%;
 }
+
 
 .app-wrapper .app-header {
-  flex: 0 1 100%;
-  text-align: center;
-  height: 50px;
-  margin: auto;
-  background-color: rgb(184, 218, 238);
+  flex-wrap: wrap;
+  min-height: 70px;
 }
+
+
+.app-wrapper .app-contact-row {
+  flex-wrap: wrap;
+  min-height: 70px;
+  background-color: rgb(204, 204, 204);
+  }
 
 .app-wrapper .app-nav {
-  flex: 0 1 20%;
-  max-width: 200px;
-  background-color: rgb(199, 209, 188);
-}
-
-.app-wrapper .app-title {
-flex: 0 1 80%;
-}
-.app-wrapper .app-contact-row {
-  border-top: 1px solid #656565;
-  display: flex;
-  padding: 5px;
-  flex: 0 1 100%;
-  text-align: center;
-  }
-
-.contact{
-  border: 5px solid #5e5373;
-}
-
-.logo{
-  border: 5px solid #5e5373;
-}
+  flex: 1 0 auto;
+  flex-wrap: wrap;
   
-.map{
-  border: 5px solid #5e5373;
-  height: 94.5%;   
-  width: 100%; 
 }
-.block__element_1{
-  flex: 0 1 33.333%;
-  }
-.block__element_2{
-  flex: 0 1 33.333%;
-  }
-.block__element_3{
 
-  flex: 0 1 33.333%;
-  }
+
+  
+  

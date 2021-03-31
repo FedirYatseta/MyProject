@@ -1,13 +1,13 @@
 import { combineReducers, createStore } from "redux";
 import MainPageReducer from "./MainPageReducer"
 import ProjectPageReducer from "./ProjectPageReducer"
-import MapAPIConcatReducer from "./MapAPIContactReducer"
+import BlogPageReducer from "./BlogPageReducer"
 
 let reducers = combineReducers(
     {
         MainPage:  MainPageReducer,
         ProjectPage: ProjectPageReducer,
-        GoogleMap: MapAPIConcatReducer
+        BlogPage: BlogPageReducer
     }
 );
 

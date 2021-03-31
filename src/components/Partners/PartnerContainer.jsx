@@ -1,4 +1,4 @@
-import Main from "./Main";
+import Partner from "./Partner";
 import {connect} from 'react-redux'
 let mapStateToProps = (state) => {
  
@@ -8,6 +8,6 @@ let mapStateToProps = (state) => {
 }
 
 
-const MainPriceContainer = connect(mapStateToProps)(Main);
+const PartnerContainer = connect(mapStateToProps)(Partner);
 
-export default MainPriceContainer;
+export default PartnerContainer;

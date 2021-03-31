@@ -1,9 +1,7 @@
-.nav{
-  padding: 5px;
-  background-color: rgb(180, 197, 228);
+
+.app-container{
   margin: 5px;
 }
-
 /* скрываем чекбокс */
 #menu__toggle {
   opacity: 0;

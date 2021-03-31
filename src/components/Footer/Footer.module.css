@@ -1,0 +1,30 @@
+.content{
+  display: flex;
+  text-align: center;
+}
+
+
+.block__element_1{
+  flex: 0 1 33.333%;
+  }
+.block__element_2{
+  flex: 0 1 33.333%;
+  }
+.block__element_3{
+  flex: 0 1 33.333%;
+  }
+
+
+  .contact{
+    margin: 5px;
+   
+  }
+  
+  .logo{
+    margin: 5px;
+  
+  }
+    
+  .map{
+    margin: 5px;
+  }

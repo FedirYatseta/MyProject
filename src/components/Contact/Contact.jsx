@@ -4,7 +4,7 @@ import s from './Contact.module.css';
 
 const Contact = () => {
   
-    return (<div>
+    return (<div className={s.content}>
         Contact
     </div>)
 }
