@@ -1,16 +1,19 @@
-import { combineReducers, createStore } from "redux";
+import {applyMiddleware, combineReducers, createStore } from "redux";
 import MainPageReducer from "./MainPageReducer"
 import ProjectPageReducer from "./ProjectPageReducer"
 import BlogPageReducer from "./BlogPageReducer"
+import StudentPageReducer from "./StudentPageReducer"
+import thunkMiddleware from 'redux-thunk'
 
 let reducers = combineReducers(
     {
         MainPage:  MainPageReducer,
         ProjectPage: ProjectPageReducer,
-        BlogPage: BlogPageReducer
+        BlogPage: BlogPageReducer,
+        StudentPage: StudentPageReducer,
     }
 );
 
-let store = createStore(reducers);
-
+const store = createStore(reducers, (applyMiddleware(thunkMiddleware)));
+window.store = store;
  export default store;

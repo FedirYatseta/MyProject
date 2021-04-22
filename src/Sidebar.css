@@ -68,7 +68,6 @@
   /* Individual item */
 .bm-item {
     display: inline-block;
-  
     color: #d1d1d1;
     margin-bottom: 10px;
     text-align: left;
@@ -79,3 +78,14 @@
   .bm-item:hover {
     color: #ffffff;
   }
+
+
+  .menu-item:focus{
+    border: none;
+  }
+
+  .menu-item
+  .menu-item:visited a {  border: none; }
+  .menu-item:focus a {   border: none; }
+  .menu-item:hover  a{   border: none; }
+  .menu-item:active a{   border: none; }

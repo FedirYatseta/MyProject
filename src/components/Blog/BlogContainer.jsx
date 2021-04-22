@@ -1,21 +1,10 @@
 
 import { connect } from 'react-redux';
 import Blog from './Blog';
-import {add_Post} from "./../../redux/actionPost/actionPost"
-import { useDispatch } from 'react-redux';
-import {NewPost} from '../../redux/services/post_services'
+import {add_Post, delete_Post} from "./../../redux/actionPost/actionPost"
 
 
 
-const CreatePost = function (props)
-{
-  
-  const dispatch = useDispatch();
-  const  SubmitPostFormCreate = (modalPost)=> {
-    dispatch(NewPost(modalPost));
-  }
- 
-}
 
 let mapStateToProps = (state) =>{
 
@@ -26,8 +15,11 @@ let mapStateToProps = (state) =>{
 
 let mapDispatchToProps = (dispatch) => {
     return {
-        sendPost  : (post) =>{
-            dispatch(add_Post(post));
+        sendPost: () =>{
+            dispatch(add_Post());
+        },
+        deletePost: (posts) =>{
+            dispatch(delete_Post(posts))
         }
     }
 }

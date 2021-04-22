@@ -5,6 +5,7 @@
     margin: 10px;
     flex: 0 1 100%;
     text-align: center;
+    flex-wrap:wrap;
 }
 
 .test {

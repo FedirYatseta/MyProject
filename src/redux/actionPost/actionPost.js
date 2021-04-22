@@ -1,26 +1,30 @@
-import {ADD_POST, SET_POST, DELETE_POST,NEW_POST, EDIT_POST, SET_LOADING} from '../TypePost/typePost'
+import {ADD_POST, DELETE_POST, EDIT_POST,SET_POST} from '../TypePost/typePost'
 
+
+export function set_Post (edit)
+{
+    return {
+        type: SET_POST,
+    }
+}
 export function add_Post(post)
 {
     debugger;
     return {
         type:ADD_POST,  
-        payload:post
     }
 }
 
-export function set_Post(post)
+export function delete_Post(post)
 {
     return {
-        type:SET_POST,  
-        payload:post
+        type:DELETE_POST,  
     }
 }
 
-export function set_Loading (loaded)
+export function edit_Post (edit)
 {
     return {
-        type: SET_LOADING,
-        payload: loaded
+        type: EDIT_POST,
     }
 }

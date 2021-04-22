@@ -13,6 +13,7 @@ html, body, #root, .app-wrapper {
 .app-wrapper .app-header {
   flex-wrap: wrap;
   min-height: 70px;
+  background-color: rgb(204, 204, 204);
 }
 
 
