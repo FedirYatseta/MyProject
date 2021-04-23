@@ -1,36 +1,47 @@
-import React, {useState,useEffect} from 'react'
-import { Button,Modal ,Table} from 'react-bootstrap';
-import {getStudentId} from '../../../redux/StudentPageReducer'
+import React, { useState, useEffect } from 'react'
+import { Form, Modal, Button,Col } from 'react-bootstrap';
+import { getStudentId } from '../../../redux/StudentPageReducer'
 
 let FormEdit = (props) => {
   debugger;
- let userID = getStudentId();
-    return (
-      <Table className="table">
-        <tbody>
-      <tr><th><b>S.No</b></th><th><b>NAME</b></th><th><b>ADDRESS </b></th><th><b>EMAIL</b></th><th><b>CONTACT</b></th><th><b>GENDER</b></th><th><b>Edit</b></th><th><b>Delete</b></th></tr>
-      {props?.userData?.map((item, index) => (
-          <tr key={index}>
-              <td>{index + 1}</td>
-              <td>{item?.name}</td>
-              <td>{item?.address}</td>
-              <td>{item?.email}</td>
-              <td>{item?.contact}</td>
-              <td>{item?.gender}</td>
-              <td>
-                  <Button  secondary className="btn btn-success" >Save</Button>
-              </td>
-              <td>
-                  <Button  secondary className="btn btn-info">Cancel</Button>
-              </td>
-          </tr>
-      ))}
-  </tbody>
-  </Table>
-    );
-  }
-  
-   export default FormEdit
-
-
+  const submitForm = () => {
    
+  }
+  return (
+    <Form>
+       <Form.Row>
+      <Form.Group as={Col} md="4">
+        <Form.Label>First Name</Form.Label>
+        <Form.Control type="email" placeholder="First Name" />
+      </Form.Group>
+      <Form.Group as={Col} md="4">
+        <Form.Label>Address</Form.Label>
+        <Form.Control type="email" placeholder="Address" />
+      </Form.Group>
+      <Form.Group as={Col} md="4" >
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="email" placeholder="name@example.com" />
+      </Form.Group>
+      </Form.Row>
+      <Form.Row>
+      <Form.Group  as={Col} md="4" >
+        <Form.Label>Contact</Form.Label>
+        <Form.Control type="email" placeholder="Contact" />
+      </Form.Group>
+      <Form.Group  as={Col} md="4" >
+        <Form.Label>Gender</Form.Label>
+        <Form.Control as="select">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+        </Form.Control>
+      </Form.Group>
+      </Form.Row>
+      <Button type="save" variant="primary" onClick={()=>{submitForm() }}>Save</Button>{' '}
+      <Button type="cancel" variant="danger">Cancel</Button>
+    </Form>
+  )
+
+}
+
+export default FormEdit

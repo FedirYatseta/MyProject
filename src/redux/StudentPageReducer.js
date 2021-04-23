@@ -2,12 +2,12 @@ import { studentAPI } from "../api/api"
 
 let initialState = {
     userData: [],
-    name: '',
-    address: '',
-    email: '',
-    contact: '',
-    id: '',
-    gender:'',
+    name: null,
+    address: null,
+    email: null,
+    contact: null,
+    id: null,
+    gender: null,
     data1: [],
     isFetching: true,
 
@@ -26,7 +26,10 @@ const StudentPageReducer = (state = initialState, action) => {
             return { ...state, isFetching: action.isFetching }
         }
         case CREATE_USER: {
+
+            debugger;
             return {
+               
                 ...state, ...action.payload
             }
         }
@@ -47,7 +50,7 @@ return{
 }
 
 export const setStudent = (userData) => ({ type: 'SET_NAME_STUDENT', userData })
-export const setStudentId = (data1) => ({ type: 'SET_USER_ID', data1 })
+export const setStudentId = (id) => ({ type: 'SET_USER_ID', id })
 export const setIsFetching = (isFetching) => ({ type: 'TOGGLE_IS_FETCHING', isFetching })
 export const createUserAC = (name,address,email,contact,gender) => ({ type: 'CREATE_USER', payload: {name,address,email,contact,gender} })
 export const deleteUserId = (index) => ({type: "DELETE_USER", payload: index})
@@ -61,10 +64,10 @@ export const getStudent = () => {
 }
 
 
-export const getStudentId = () => {
+export const getStudentId = (id) => {
     return async (dispatch) => {
         debugger;
-        let response = await studentAPI.getUserID()
+        let response = await studentAPI.getUserID(id)
         dispatch(setStudentId(response))
     }
 }
@@ -73,15 +76,18 @@ export const delUser = (id) => {
     return async (dispatch) =>{
         debugger;
         let response = await studentAPI.deleteUser(id);
-        dispatch(deleteUserId())
+        dispatch(deleteUserId(response))
+        dispatch(getStudent()) 
     }
 }
+
 
 export const createUserThunk = (name,address,email,contact,gender) => {
     return async (dispatch) => {
         debugger;
         let response = await studentAPI.createUser(name,address,email,contact,gender)
-        dispatch(createUserAC(name,address,email,contact,gender))
+        dispatch(createUserAC(response.data))
+        dispatch(getStudent());
     }
 }
 
