@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { Form, Modal, Button,Col } from 'react-bootstrap';
-import { getStudentId } from '../../../redux/StudentPageReducer'
+import React from 'react'
+import { Form, Button,Col } from 'react-bootstrap';
 
 let FormEdit = (props) => {
   debugger;

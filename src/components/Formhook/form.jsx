@@ -6,8 +6,8 @@ import s from './Form.module.css'
     const { register, handleSubmit } = useForm();
     debugger;
     const onSubmit = data => props.createUserThunk(data.name, data.address, data.email, data.contact, data.gender);
-    return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+    return (<div  className={s.container}>
+         <form onSubmit={handleSubmit(onSubmit)}>
                firstName <input {...register("name", { required: true, maxLength: 20 })} />
                address   <input {...register("address", { pattern: /^[A-Za-z]+$/i })} />
                email <input {...register("email")} />
@@ -17,8 +17,10 @@ import s from './Form.module.css'
                 <option value="male">male</option>
                 <option value="other">other</option>
             </select>
-            <input type="submit" />
+            <input  className={s.input }type="submit" />
         </form>
+    </div>
+       
     )
 }
 
