@@ -2,7 +2,7 @@
   
   h1 {
     font-weight: 100;
-    color: white;
+    color: rgb(122, 124, 126);
     text-align: center;
     padding-bottom: 10px;
     border-bottom: 1px solid rgb(79, 98, 148);
@@ -41,7 +41,7 @@
     display: block;
     margin-bottom: 13px;
     margin-top: 20px;
-    color: white;
+    color: rgb(81, 92, 122);
     font-size: 14px;
     font-weight: 200;
   }

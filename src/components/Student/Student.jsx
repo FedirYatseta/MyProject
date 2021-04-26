@@ -3,7 +3,6 @@ import FormCrud from "../Formhook/form";
 import FormView from './FormView'
 
 let Student = (props) => {
-    debugger;
     return (
         <div>
             <p className="text-center" style={{ fontSize: '25px' }}><b> CRUD Operation Using React, Nodejs, Express, MongoDB</b></p>

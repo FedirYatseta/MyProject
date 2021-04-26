@@ -8,7 +8,6 @@ import { getStudent, setIsFetching, createUserThunk, delUser,setStudentId } from
 class StudentContainer extends React.Component {
 
     componentDidMount() {
-        debugger;
         this.props.setIsFetching(false)
         this.props.getStudent(this.props.userData)
         this.props.setStudentId(this.props.id)

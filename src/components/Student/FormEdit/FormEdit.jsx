@@ -1,8 +1,11 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Form, Button,Col } from 'react-bootstrap';
 
 let FormEdit = (props) => {
   debugger;
+
+  const [user, setUsers] = useState([])
+  const [userId, setUser] = useState()
   const submitForm = () => {
    
   }

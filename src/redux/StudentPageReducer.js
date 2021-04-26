@@ -57,7 +57,7 @@ export const deleteUserId = (index) => ({type: "DELETE_USER", payload: index})
 
 export const getStudent = () => {
     return async (dispatch) => {
-        debugger;
+      
         let response = await studentAPI.getUsers()
         dispatch(setStudent(response))
     }
@@ -66,7 +66,7 @@ export const getStudent = () => {
 
 export const getStudentId = (id) => {
     return async (dispatch) => {
-        debugger;
+   
         let response = await studentAPI.getUserID(id)
         dispatch(setStudentId(response))
     }
@@ -74,7 +74,6 @@ export const getStudentId = (id) => {
 
 export const delUser = (id) => {
     return async (dispatch) =>{
-        debugger;
         let response = await studentAPI.deleteUser(id);
         dispatch(deleteUserId(response))
         dispatch(getStudent()) 
@@ -84,7 +83,6 @@ export const delUser = (id) => {
 
 export const createUserThunk = (name,address,email,contact,gender) => {
     return async (dispatch) => {
-        debugger;
         let response = await studentAPI.createUser(name,address,email,contact,gender)
         dispatch(createUserAC(response.data))
         dispatch(getStudent());

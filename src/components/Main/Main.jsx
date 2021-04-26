@@ -14,8 +14,6 @@ const Main = () => {
             <div className='app-container'>
                 <Route path="/main" render={() => <PartnerContainer />} />
                 <Route path="/project" render={() => <ProjectContainerPage />} />
-                <Route path="/teams" render={() => <Teams />} />
-                <Route path="/blog" render={() => <BlogContainer />} />
                 <Route path="/users" render={() => <StudentContainer />} />
                 <Route path="/contact" render={() => <Contact />} />
                 <Route path="/changeUser/:id" render={ () => <FormEdit /> }/>

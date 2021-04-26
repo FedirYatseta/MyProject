@@ -1,8 +1,22 @@
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 import { Button, Form, Modal, Table } from 'react-bootstrap'
 
 const FormView = (props) => {
 
+
+    const [users, setUsers] = useState([])
+    debugger;
+    const [toDoTitle, setTodoUsers] = useState(props.userData)
+
+    const updateTodo = e => {
+        if(!e )
+        setUsers([...users,
+            {
+            id: toDoTitle.id,
+            name: toDoTitle.name}
+        ])
+    }
     return (
         <div>
             <Form>
@@ -18,10 +32,12 @@ const FormView = (props) => {
                                 <td>{item?.contact}</td>
                                 <td>{item?.gender}</td>
                                 <td>
-                                    <Button variant="primary" secondary className="btn btn-success" >Edit</Button>
+                                    <NavLink to={'/changeUser/' + item._id}>
+                                        <Button onClick={() =>updateTodo(props.id)} variant="primary" secondary className="btn btn-success" >Edit</Button>
+                                    </NavLink>
                                 </td>
                                 <td>
-                                    <Button onClick={(e) => { props.delUser(item._id) }} secondary className="btn btn-info">Delete</Button>
+                                    <Button onClick={(e) => { props.delUser(item._id)}} secondary className="btn btn-info">Delete</Button>
                                 </td>
                             </tr>
                         ))}

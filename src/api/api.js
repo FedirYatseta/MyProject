@@ -25,7 +25,6 @@ export const studentAPI = {
     },
 
     getUserID(id) {
-        debugger;
         return instance.get('users/user/' + id)
     }
 }

@@ -4,7 +4,6 @@ import s from './Form.module.css'
 
  let FormCrud = (props) => {
     const { register, handleSubmit } = useForm();
-    debugger;
     const onSubmit = data => props.createUserThunk(data.name, data.address, data.email, data.contact, data.gender);
     return (<div  className={s.container}>
          <form onSubmit={handleSubmit(onSubmit)}>
